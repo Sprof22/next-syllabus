@@ -8,7 +8,7 @@ export interface IItem {
 export const listTopics: IItem[] = [
   {
     title: "Set up Next JS",
-    image: "01d",
+    image: "next",
     id: 1,
     description: "Talks about the Basics of Setting up a NextJS project"
   },

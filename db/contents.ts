@@ -10,6 +10,7 @@ export const listTopics: IItem[] = [
     title: "Set up Next JS",
     image: "01d",
     id: 1,
+    description: "Talks about the Basics of Setting up a NextJS project"
   },
   {
     title: "Definitions of folders",

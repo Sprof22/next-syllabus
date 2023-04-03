@@ -20,6 +20,10 @@ padding: 16px;
         grid-template-columns: 100%;
         align-items: center;
     }
+    &: nth-of-type(2){
+      display: flex;
+      align-items: center;
+    }
   }
 
 `;
@@ -48,7 +52,7 @@ const Contents = ({ content }) => {
               />
               <div>{content.title}</div>
             </div>
-            <div>{content.description}</div>
+            {content.description? <div>{content.description}</div> : <div><h2>Hello</h2><img src={`/icons/${content.image}.png`}/></div>}
           </CourseDetails>
         </div>
       </Main>

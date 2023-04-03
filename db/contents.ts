@@ -16,6 +16,7 @@ export const listTopics: IItem[] = [
     title: "Definitions of folders",
     image: "01n",
     id: 2,
+    description: "This explains the folder structure of NextJS such as the pages folder and others."
   },
   {
     title: "Next JS Prerendering and Types",

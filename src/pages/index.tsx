@@ -2,21 +2,32 @@ import Head from "next/head";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import NextLogo from "./../../public/nextlogo.json";
+import ReactLogo from "./../../public/react.json";
+import Lottie from "lottie-react";
+import {IItem, listTopics} from '../../db/contents'
+import Image from "next/image";
 
-const Header = styled.h1`
+
+
+
+
+export const Header = styled.h1`
   color: black;
   font-size: 40px;
   text-align: center;
+  text-decoration: underline;
 `;
-const SubHeader = styled.h2`
+export const SubHeader = styled.h2`
   color: black;
   font-size: 30px;
 `;
 const Item = styled.h2`
   display: flex;
+  height: 40px;
+  line-height: 40px;
+  gap: 20px;
   > img {
-    height: 40px;
-    width: 40px;
     margin-right: 10px;
   }
 `;
@@ -29,40 +40,18 @@ const List = styled.h2`
   }
 `;
 
-const Main = styled.div`
+export const Main = styled.div`
   margin: auto;
   padding: 35px;
 `;
 
-const list = [
-  {
-    title: "one",
-    image: "vercel.svg",
-    id: 1,
-  },
-  {
-    title: "one",
-    image: "vercel.svg",
-    id: 2,
-  },
-  {
-    title: "one",
-    image: "vercel.svg",
-    id: 3,
-  },
-  {
-    title: "one",
-    image: "vercel.svg",
-    id: 4,
-  },
-  {
-    title: "one",
-    image: "vercel.svg",
-    id: 5,
-  },
-];
+interface HomeProps {
+  contents: IItem[]
+} 
 
-const Home = function () {
+
+
+const Home = function ({contents}: HomeProps) {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
@@ -80,9 +69,18 @@ const Home = function () {
         <Header>Welcome to NextJS Syllabus</Header>
         <SubHeader>Contents</SubHeader>
         <List>
-          {list.map((item) => (
-            <Link href={`contents/${item.id}`}key={item.id}>
-              <Item><span style={{marginRight: "9px"}}>{item.id}</span><img src={`./vercel.svg`} alt="" /><span>{item.title}</span></Item>
+          {contents.map((item) => (
+            <Link href={`contents/${item.id}`} key={item.id}>
+              <Item>
+                <span style={{ marginRight: "9px" }}>{item.id}</span>
+                <Image
+                src={`/icons/${item.image}.png`}
+                alt={`${item.title}`}
+                width={50}
+                height={50}
+              />
+                <span>{item.title}</span>
+              </Item>
             </Link>
           ))}
         </List>
@@ -92,3 +90,9 @@ const Home = function () {
 };
 
 export default Home;
+
+export async function getServerSideProps(){
+
+  const contents = [...listTopics]
+  return {props: {contents}}
+}

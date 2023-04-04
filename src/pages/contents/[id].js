@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { listTopics } from "../../../db/contents";
 import { Main, Header } from "../index";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const CourseDetails = styled.div`
 display: grid;
@@ -37,8 +38,24 @@ h2{
   font-size: 50px;
 }
 `
+const Button = styled.div`
+cursor: pointer;
+align-items: center;
+justify-content: center;
+color: red;
+font-weight: bold
+text-align: center;
+margin: 50px;
+`
 
 const Contents = ({ content }) => {
+  
+  const router = useRouter()
+  let productID =Number(router.query.id )
+  const handleNextClick = () => {
+    productID =+ 1;
+    console.log(" I was clicked", productID)
+  }
   return (
     <div>
       <Head>
@@ -75,6 +92,7 @@ const Contents = ({ content }) => {
                 height={700}
               />
         </Background>: <Background><h2>No Background Image</h2></Background>}
+        <Button onClick={handleNextClick}>Next Page</Button>
     </div>
   );
 };

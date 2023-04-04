@@ -28,6 +28,16 @@ padding: 16px;
 
 `;
 
+const Background = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+h2{
+  color: blue;
+  font-size: 50px;
+}
+`
+
 const Contents = ({ content }) => {
   return (
     <div>
@@ -52,10 +62,19 @@ const Contents = ({ content }) => {
               />
               <div>{content.title}</div>
             </div>
-            {content.description? <div>{content.description}</div> : <div><h2>Hello</h2><img src={`/icons/${content.image}.png`}/></div>}
+            {content.description? <div>{content.description}</div> : <div><h2>No description</h2><img src={`/icons/${content.image}.png`}/></div>}
           </CourseDetails>
         </div>
+        
       </Main>
+      {content.background? <Background>
+        <Image
+                src={`/background/${content.background}.png`}
+                alt={`${content.title}`}
+                width={700}
+                height={700}
+              />
+        </Background>: <Background><h2>No Background Image</h2></Background>}
     </div>
   );
 };

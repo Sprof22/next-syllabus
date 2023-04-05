@@ -27,7 +27,7 @@ export const listTopics: IItem[] = [
     title: "Routes and Definitions",
     image: "02n",
     id: 3,
-    description: "Multiple routing variations.",
+    description: "Page Routing example, Dynamic Routing scenarios",
     background: "productroute",
   },
   {

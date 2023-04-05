@@ -8,54 +8,48 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export const CourseDetails = styled.div`
-display: grid;
-grid-template-columns: auto auto;
-grid-gap: 30px;
-background: #F6F6F6;
-border-radius: 5px;
-padding: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px;
+  background: #f6f6f6;
+  border-radius: 5px;
+  padding: 16px;
 
   > div {
-    &: nth-of-type(1){
-        display: grid;
-        grid-template-columns: 100%;
-        align-items: center;
+    &: nth-of-type(1) {
+      display: grid;
+      grid-template-columns: 100%;
+      align-items: center;
     }
-    &: nth-of-type(2){
+    &: nth-of-type(2) {
       display: flex;
       align-items: center;
     }
   }
-
 `;
 
 const Background = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-h2{
-  color: blue;
-  font-size: 50px;
-}
-`
-const Button = styled.div`
-cursor: pointer;
-align-items: center;
-justify-content: center;
-color: red;
-font-weight: bold
-text-align: center;
-margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    color: blue;
+    font-size: 50px;
+  }
 `
 
-const Contents = ({ content }) => {
-  
-  const router = useRouter()
-  let productID =Number(router.query.id )
-  const handleNextClick = () => {
-    productID =+ 1;
-    console.log(" I was clicked", productID)
-  }
+const NavPageButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const Contents = ({ content, length }) => {
+  const router = useRouter();
+  const productID = Number(router.query.id);
+  const nextId = productID +1;
+  const prevId = productID -1;
+
+  console.log(length, "this is the length")
   return (
     <div>
       <Head>
@@ -70,7 +64,6 @@ const Contents = ({ content }) => {
         <div>
           <CourseDetails>
             <div>
-                
               <Image
                 src={`/icons/${content.image}.png`}
                 alt={`${content.title}`}
@@ -79,20 +72,41 @@ const Contents = ({ content }) => {
               />
               <div>{content.title}</div>
             </div>
-            {content.description? <div>{content.description}</div> : <div><h2>No description</h2><img src={`/icons/${content.image}.png`}/></div>}
+            {content.description ? (
+              <div>{content.description}</div>
+            ) : (
+              <div>
+                <h2>No description</h2>
+                <img src={`/icons/${content.image}.png`} />
+              </div>
+            )}
           </CourseDetails>
         </div>
-        
       </Main>
-      {content.background? <Background>
-        <Image
-                src={`/background/${content.background}.png`}
-                alt={`${content.title}`}
-                width={700}
-                height={700}
-              />
-        </Background>: <Background><h2>No Background Image</h2></Background>}
-        <Button onClick={handleNextClick}>Next Page</Button>
+      {content.background ? (
+        <Background>
+          <Image
+            src={`/background/${content.background}.png`}
+            alt={`${content.title}`}
+            width={700}
+            height={700}
+          />
+        </Background>
+      ) : (
+        <Background>
+          <h2>No Background Image</h2>
+        </Background>
+      )}
+      <Main>
+      <NavPageButtons>
+      {nextId === 1 ? <button disabled>Prev Page</button>: <Link href={`/contents/${prevId}`}>
+        <button disabled>Prev Page</button>
+      </Link>}
+      {nextId === length ? <button disabled>Next Page</button> :<Link href={`/contents/${nextId}`}>
+        <button>Next Page</button>
+      </Link>}
+      </NavPageButtons>
+      </Main>
     </div>
   );
 };
@@ -104,5 +118,6 @@ export async function getServerSideProps(context) {
   const content = contents.find(
     (element) => element.id === Number(context.query.id)
   );
-  return { props: { content } };
+  const length = contents.length;
+  return { props: { content, length } };
 }

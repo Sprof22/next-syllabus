@@ -72,7 +72,7 @@ const Home = function ({contents}: HomeProps) {
           {contents.map((item) => (
             <Link href={`contents/${item.id}`} key={item.id}>
               <Item>
-                <span style={{ marginRight: "9px" }}>{item.id}</span>
+                <span style={{ marginRight: "9 px" }}>{item.id}</span>
                 <Image
                 src={`/icons/${item.image}.png`}
                 alt={`${item.title}`}

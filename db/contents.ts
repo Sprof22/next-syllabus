@@ -27,22 +27,29 @@ export const listTopics: IItem[] = [
     title: "Routes and Definitions",
     image: "02n",
     id: 3,
-    description: "Page Routing example, Dynamic Routing scenarios",
+    description: "Page Routing example, Dynamic Routing scenarios, catch all routes, Link Components, router.push & router.replace and 404 Page",
     background: "productroute",
   },
   {
-    title: "Next JS Prerendering and Types",
+    title: "PreRendering and Data Fetching",
     image: "02d",
     id: 4,
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "Difference between React and NextJS(PreRendering): What and Why of Prerendering, Static Generation with and with data, Incremental SG, Dynamic Parameters while fetching Data",
   },
   {
-    title: "Static Prerendering",
+    title: "Server Side Rendering",
     image: "03d",
     id: 5,
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Data fetching with SSR(getStaticProps)",
+  },
+  {
+    title: "Client Side Data Fetching",
+    image: "03d",
+    id: 6,
+    description:
+      "Combining PreRendering with Client Side Data Fetching",
   },
   {
     title: "one",

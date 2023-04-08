@@ -28,14 +28,23 @@ export const listTopics: IItem[] = [
     image: "02n",
     id: 3,
     description: "Page Routing example, Dynamic Routing scenarios, catch all routes, Link Components, router.push & router.replace and 404 Page",
-    background: "productroute",
+    background: "linkComponent",
   },
   {
-    title: "PreRendering and Data Fetching",
+    title: "PreRendering and Data Fetching Introduction",
     image: "02d",
     id: 4,
     description:
-      "Difference between React and NextJS(PreRendering): What and Why of Prerendering, Static Generation with and with data, Incremental SG, Dynamic Parameters while fetching Data",
+      "Difference between React and NextJS(PreRendering): What and Why of Prerendering, Static Generation without and with data",
+      background: "ssg"
+  },
+  {
+    title: "NextJS Production Build",
+    image: "03d",
+    id: 5,
+    description:
+      "Static Generation without and with data, Incremental SG, Dynamic Parameters while fetching Data",
+      background: "getStaticProps"
   },
   {
     title: "Server Side Rendering",
@@ -52,13 +61,14 @@ export const listTopics: IItem[] = [
       "Combining PreRendering with Client Side Data Fetching",
   },
   {
-    title: "one",
+    title: "Pages vs Components",
     image: "10n",
-    id: 6,
+    id: 7,
+    description: "Difference between Pages and Components"
   },
   {
     title: "fish",
     image: "11d",
-    id: 7,
+    id: 8,
   },
 ];

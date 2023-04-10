@@ -18,3 +18,19 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.active-button{
+  color: black;
+  background: green 50%;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.disabled-button{
+  color: red;
+  background: grey 50%;
+  cursor: none;
+  padding: 5px;
+  border-radius: 2px;
+}

@@ -43,6 +43,21 @@ const NavPageButtons = styled.div`
   justify-content: space-between;
 `
 
+const NavFooter = styled.div`
+  position: fixed;
+  bottom: 20px;
+  margin: auto;
+  min-width: 50vw
+`
+
+export const MainBelow = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+  margin: auto;
+  padding: 35px;
+`;
+
 const Contents = ({ content, length }) => {
   const router = useRouter();
   const productID = Number(router.query.id);
@@ -97,16 +112,18 @@ const Contents = ({ content, length }) => {
           <h2>No Background Image</h2>
         </Background>
       )}
-      <Main>
+      <MainBelow>
+      <NavFooter>
       <NavPageButtons>
-      {nextId === 1 ? <button disabled>Prev Page</button>: <Link href={`/contents/${prevId}`}>
-        <button disabled>Prev Page</button>
+      {nextId === 2 ? <button className="disabled-button">Prev Page</button>: <Link href={`/contents/${prevId}`}>
+        <button className="active-button">Prev Page</button>
       </Link>}
-      {nextId === length ? <button disabled>Next Page</button> :<Link href={`/contents/${nextId}`}>
-        <button>Next Page</button>
+      {nextId === length ? <button className="disabled-button">Next Page</button> :<Link href={`/contents/${nextId}`}>
+        <button className="active-button">Next Page</button>
       </Link>}
       </NavPageButtons>
-      </Main>
+      </NavFooter>
+      </MainBelow>
     </div>
   );
 };

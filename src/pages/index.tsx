@@ -2,14 +2,8 @@ import Head from "next/head";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import NextLogo from "./../../public/nextlogo.json";
-import ReactLogo from "./../../public/react.json";
-import Lottie from "lottie-react";
 import {IItem, listTopics} from '../../db/contents'
 import Image from "next/image";
-
-
-
 
 
 export const Header = styled.h1`

@@ -43,32 +43,41 @@ export const listTopics: IItem[] = [
     image: "03d",
     id: 5,
     description:
-      "Static Generation without and with data, Incremental SG, Dynamic Parameters while fetching Data",
+      "Static Generation without and with data, Incremental SG, Dynamic Parameters while fetching Data, getStaticPaths",
       background: "getStaticProps"
   },
   {
+    title: "Get Static Paths (getStaticPaths ())",
+    image: "03d",
+    id: 6,
+    description:
+      "fallback false, fallback true, fallback blocking, Dynamic Parameters while fetching Data, getStaticPaths",
+      background: "getStaticProps"
+  },
+
+  {
     title: "Server Side Rendering",
     image: "03d",
-    id: 5,
+    id: 7,
     description:
       "What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Data fetching with SSR(getStaticProps)",
   },
   {
     title: "Client Side Data Fetching",
     image: "03d",
-    id: 6,
+    id: 8,
     description:
       "Combining PreRendering with Client Side Data Fetching",
   },
   {
     title: "Pages vs Components",
     image: "10n",
-    id: 7,
+    id: 9,
     description: "Difference between Pages and Components"
   },
   {
     title: "fish",
     image: "11d",
-    id: 8,
+    id: 10,
   },
 ];

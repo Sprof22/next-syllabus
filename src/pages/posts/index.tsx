@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 
@@ -6,7 +7,7 @@ export interface IPost {
   title: string;
 }
 
-interface PostProps {
+export interface PostProps {
   posts: IPost[]
 } 
 
@@ -17,7 +18,8 @@ const PostsList = ({posts}: PostProps) => {
    {
     posts.map((post) => (
         <div key={post.id}>
-            <h1>{post.id}{post.title}</h1>
+            <Link href={`/posts/${post.id}`}>{post.id}{post.title}</Link>
+            <hr/>
         </div>
        
     ))

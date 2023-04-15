@@ -6,10 +6,10 @@ function Product({products}) {
   return <><h1>List of products</h1>
   {products.map(product => {
     return (
-        <Link href={`/products/${product.id}`} key={product.id}>
+        <div key={product.id}>
             <h2>{product.id} {product.title} {product.price}</h2>
             <hr/>
-        </Link>
+        </div>
     )
   })}
   </>;

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 function Product({products}) {
@@ -5,10 +6,10 @@ function Product({products}) {
   return <><h1>List of products</h1>
   {products.map(product => {
     return (
-        <div key={product.id}>
+        <Link href={`/products/${product.id}`} key={product.id}>
             <h2>{product.id} {product.title} {product.price}</h2>
             <hr/>
-        </div>
+        </Link>
     )
   })}
   </>;

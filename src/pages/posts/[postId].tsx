@@ -27,7 +27,6 @@ export default Post;
 export async function getStaticPaths() {
   const response = await fetch("https://dummyjson.com/posts");
   const data = await response.json();
-  console.log(data, "this Sprof22");
 
   // const paths= data.posts.map(post => {
   //   return {

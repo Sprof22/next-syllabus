@@ -27,7 +27,8 @@ export const listTopics: IItem[] = [
     title: "Routes and Definitions",
     image: "02n",
     id: 3,
-    description: "Page Routing example, Dynamic Routing scenarios, catch all routes, Link Components, router.push & router.replace and 404 Page",
+    description:
+      "Page Routing example, Dynamic Routing scenarios, catch all routes, Link Components, router.push & router.replace and 404 Page",
     background: "linkComponent",
   },
   {
@@ -36,7 +37,7 @@ export const listTopics: IItem[] = [
     id: 4,
     description:
       "Difference between React and NextJS(PreRendering): What and Why of Prerendering, Static Generation without and with data",
-      background: "ssg"
+    background: "ssg",
   },
   {
     title: "NextJS Production Build",
@@ -44,7 +45,7 @@ export const listTopics: IItem[] = [
     id: 5,
     description:
       "Static Generation without and with data, Incremental SG, Dynamic Parameters while fetching Data, getStaticPaths",
-      background: "getStaticProps"
+    background: "getStaticProps",
   },
   {
     title: "Get Static Paths (getStaticPaths ())",
@@ -52,36 +53,35 @@ export const listTopics: IItem[] = [
     id: 6,
     description:
       "fallback false, fallback true, fallback blocking, Dynamic Parameters while fetching Data, getStaticPaths",
-      background: "getStaticProps"
+    background: "getStaticProps",
   },
   {
     title: "Incremental Static Regeneration",
     image: "03d",
     id: 7,
-    description:
-      "Issues with SSG,",
-      background: "issueSSG"
+    description: "Issues with SSG,",
+    background: "issueSSG",
   },
 
   {
-    title: "Server Side Rendering",
+    title: "ISR cont.",
     image: "03d",
     id: 8,
     description:
       "What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Data fetching with SSR(getStaticProps)",
+    background: "isrneed"
   },
   {
-    title: "Client Side Data Fetching",
+    title: "Server Sider Rendering",
     image: "03d",
     id: 9,
-    description:
-      "Combining PreRendering with Client Side Data Fetching",
+    description: "Issues with SSR",
   },
   {
     title: "Pages vs Components",
     image: "10n",
     id: 10,
-    description: "Difference between Pages and Components"
+    description: "Difference between Pages and Components",
   },
   {
     title: "fish",

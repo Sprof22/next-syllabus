@@ -25,19 +25,29 @@
         "id": 1,
         "title": "Class 1",
         "price": 1000,
-        "description": "Description 1"
+        "description": "Description 1",
+        "category": "school"
       },
       {
           "id": 2,
           "title": "Class 2",
-          "price": 2000,
-          "description": "Description 2"
+          "price": 1000,
+          "description": "Description 2",
+          "category": "lib"
         },
         {
           "id": 3,
           "title": "Class 3",
           "price": 2500,
-          "description": "Description 3"
+          "description": "Description 3",
+          "category": "school"
+        },
+        {
+          "id": 4,
+          "title": "Class 4",
+          "price": 2000,
+          "description": "Description 4",
+          "category": "fish"
         }
   ]
 }

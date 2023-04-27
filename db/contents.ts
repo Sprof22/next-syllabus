@@ -76,7 +76,7 @@ export const listTopics: IItem[] = [
   {
     title: "API cont",
     description: "Dynamic API Routers, Delete Request, Catch all routes, APIs and PreRendering, API SUMMARY",
-    id: 9,
+    id: 10,
     image: "03d",
     background: "ssg",
   }

@@ -2,9 +2,9 @@ import Head from "next/head";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import {IItem, listTopics} from '../../db/contents'
+import { IItem, listTopics } from "../../db/contents";
+import { syllabus } from "../../db/syllabus";
 import Image from "next/image";
-
 
 export const Header = styled.h1`
   color: black;
@@ -40,12 +40,10 @@ export const Main = styled.div`
 `;
 
 interface HomeProps {
-  contents: IItem[]
-} 
+  contents: IItem[];
+}
 
-
-
-const Home = function ({contents}: HomeProps) {
+const Home = function ({ contents }: HomeProps) {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
@@ -67,12 +65,7 @@ const Home = function ({contents}: HomeProps) {
             <Link href={`contents/${item.id}`} key={item.id}>
               <Item>
                 <span style={{ marginRight: "9 px" }}>{item.id}</span>
-                <Image
-                src={`/icons/${item.image}.png`}
-                alt={`${item.title}`}
-                width={50}
-                height={50}
-              />
+                
                 <span>{item.title}</span>
               </Item>
             </Link>
@@ -85,8 +78,7 @@ const Home = function ({contents}: HomeProps) {
 
 export default Home;
 
-export async function getServerSideProps(){
-
-  const contents = [...listTopics]
-  return {props: {contents}}
+export async function getServerSideProps() {
+  const contents = [...listTopics];
+  return { props: { contents } };
 }

@@ -1,6 +1,6 @@
 export interface IItem {
   title: string;
-  image: string;
+  image?: string;
   id: number;
   description?: string;
   background?: string;
@@ -8,84 +8,81 @@ export interface IItem {
 
 export const listTopics: IItem[] = [
   {
-    title: "What is Next JS",
-    image: "next",
+    title: "Introduction To NEXTJs",
+    description: "Why next JS, Definition of folders",
     id: 1,
-    description:
-      "The Definition, Why use NextJS, Difference between REACT and NEXTJS, Prerequisites for NextJS,Setting Up NextJS",
+    image: "next",
     background: "next1",
   },
   {
-    title: "Definitions of folders",
-    image: "01n",
-    id: 2,
+    title: "Routing",
     description:
-      "This explains the folder structure of NextJS such as the pages folder and others.",
+      "file based routing, nested routes, dynamic pages, navigating programmatically, catch all routes, optional catch all routes",
+    id: 2,
+    image: "01n",
     background: "productroute",
   },
   {
-    title: "Routes and Definitions",
-    image: "02n",
-    id: 3,
+    title: "Introduction to preRendering / Static Site Generation(SSG)",
     description:
-      "Page Routing example, Dynamic Routing scenarios, catch all routes, Link Components, router.push & router.replace and 404 Page",
+      "Difference between React and NextJS(PreRendering): What and Why of Prerendering, Static Generation without and with data, Pages vs Components",
+    id: 3,
+    image: "02n",
     background: "linkComponent",
   },
   {
-    title: "PreRendering and Data Fetching Introduction",
-    image: "02d",
+    title: "More on getStaticProps()",
+    description:
+      "Inspecting and running SSG builds, SSG with dynamic parameters",
     id: 4,
-    description:
-      "Difference between React and NextJS(PreRendering): What and Why of Prerendering, Static Generation without and with data",
-    background: "ssg",
+    image: "02n",
+    background: "linkComponent",
   },
   {
-    title: "NextJS Production Build",
-    image: "03d",
+    title: "Get Static Paths",
+    description: " fallback: false, true and 'blocking'",
     id: 5,
-    description:
-      "Static Generation without and with data, Incremental SG, Dynamic Parameters while fetching Data, getStaticPaths",
-    background: "getStaticProps",
+    image: "03d",
+    background: "fallback",
   },
   {
-    title: "Get Static Paths (getStaticPaths ())",
-    image: "03d",
-    id: 6,
-    description:
-      "fallback false, fallback true, fallback blocking, Dynamic Parameters while fetching Data, getStaticPaths",
-    background: "getStaticProps",
-  },
-  {
-    title: "Incremental Static Regeneration",
-    image: "03d",
-    id: 7,
-    description: "Issues with SSG,",
-    background: "issueSSG",
-  },
-
-  {
-    title: "ISR cont.",
-    image: "03d",
-    id: 8,
-    description:
-      "What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Data fetching with SSR(getStaticProps)",
-    background: "isrneed"
-  },
+      title: "Incremental Static Regeneration",
+      image: "03d",
+      id: 6,
+      description: "Issues with SSG,  What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Inspecting ISR builds",
+      background: "isrneed",
+    },
   {
     title: "Server Sider Rendering",
+    description: "Issues with SSG, ",
+    id: 7,
     image: "03d",
-    id: 9,
-    description: "Issues with SSR",
+    background: "ssg",
   },
-  {
-    title: "Pages vs Components",
-    image: "10n",
-    id: 10,
-    description: "Difference between Pages and Components",
-  },
-  {
-    title: "fish",
-    image: "11d",
-    id: 11,
-  },
+
+  // {
+  //   title: "ISR cont.",
+  //   image: "03d",
+  //   id: 8,
+  //   description:
+  //     "What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Data fetching with SSR(getStaticProps)",
+  //   background: "isrneed",
+  // },
+  // {
+  //   title: "Server Sider Rendering",
+  //   image: "03d",
+  //   id: 9,
+  //   description: "Issues with SSR",
+  // },
+  // {
+  //   title: "Pages vs Components",
+  //   image: "10n",
+  //   id: 10,
+  //   description: "Difference between Pages and Components",
+  // },
+  // {
+  //   title: "fish",
+  //   image: "11d",
+  //   id: 11,
+  // },
 ];

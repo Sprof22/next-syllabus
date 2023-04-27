@@ -79,31 +79,5 @@ export const listTopics: IItem[] = [
     id: 9,
     image: "03d",
     background: "ssg",
-  },
-
-  // {
-  //   title: "ISR cont.",
-  //   image: "03d",
-  //   id: 8,
-  //   description:
-  //     "What (html is generated at build time ), When and How of SSR, How does it difer from SG, and when to use one over the other, Data fetching with SSR(getStaticProps)",
-  //   background: "isrneed",
-  // },
-  // {
-  //   title: "Server Sider Rendering",
-  //   image: "03d",
-  //   id: 9,
-  //   description: "Issues with SSR",
-  // },
-  // {
-  //   title: "Pages vs Components",
-  //   image: "10n",
-  //   id: 10,
-  //   description: "Difference between Pages and Components",
-  // },
-  // {
-  //   title: "fish",
-  //   image: "11d",
-  //   id: 11,
-  // },
+  }
 ];

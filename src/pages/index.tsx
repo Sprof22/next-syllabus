@@ -64,9 +64,9 @@ const Home = function ({ contents }: HomeProps) {
           {contents.map((item) => (
             <Link href={`contents/${item.id}`} key={item.id}>
               <Item>
-                <span >{item.id}</span>
+                <span style={{width: "40px"}}>{item.id}</span>
                 
-                <span style={{ marginLeft: "14px", background: "red", justifyContent: "start" }}>{item.title}</span>
+                <span>{item.title}</span>
               </Item>
             </Link>
           ))}
